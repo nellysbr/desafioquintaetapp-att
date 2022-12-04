@@ -1,0 +1,25 @@
+.header {
+  background-color: #fff !important;
+  height: 16rem;
+
+  .headerContainer {
+    width: 100%;
+    margin-top: 1rem;
+    .headerTitle {
+      text-align: center;
+    }
+
+    .btnLogout {
+      float: right;
+    }
+  }
+}
+
+.menu {
+  padding: 1em;
+}
+
+.content {
+  padding: 4em;
+  background-color: #f9f9f9;
+}
