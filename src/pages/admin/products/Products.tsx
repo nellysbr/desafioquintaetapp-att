@@ -23,23 +23,6 @@ import Router from "next/router";
 import ProductList from "../../../components/ProductList";
 
 const Products: NextPageWithLayout = () => {
-  const [dados, setDados] = useState<any>([]);
-
-  const getData = async () => {
-    getDocs(dbInstance).then((data) => {
-      setDados(
-        data.docs.map((item) => {
-          return { ...item.data, id: item.id };
-        })
-      );
-      console.log(dados);
-    });
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <>
       <Card

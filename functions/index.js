@@ -7,9 +7,10 @@ admin.initializeApp();
 const db = admin.firestore().collection("Cardapio");
 
 app.get("/Cardapio", (req, res) => {
-  db.get().then(function(docs) {
-    const Cardapio = [];
-    docs.forEach(function(doc) {
+  db.get().then(function (docs) {
+    // eslint-disable-next-line prefer-const
+    let Cardapio = [];
+    docs.forEach(function (doc) {
       Cardapio.push({
         id: doc.id,
         nome: doc.data().nome,
@@ -28,8 +29,8 @@ app.post("/Cardapio", (req, res) => {
     description: req.body.description,
   };
 
-  db.add(newCardapio).then(function() {
-    res.status(200);
+  db.add(newCardapio).then(function () {
+    res.status(200).json(null);
   });
 });
 
