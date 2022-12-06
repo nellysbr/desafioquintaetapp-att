@@ -2688,6 +2688,11 @@ eslint-plugin-react-hooks@^4.5.0:
   resolved "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.0.tgz"
   integrity sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==
 
+eslint-plugin-react-hooks@^5.0.0-next-f0534ae94-20221202:
+  version "5.0.0-next-f0534ae94-20221202"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-5.0.0-next-f0534ae94-20221202.tgz#3365ee9ca7569509d88d3f22e46cb8b6c169df73"
+  integrity sha512-ydxgcjf3C9HohCatKxDJHcHHULv3aZuPy9VQwSO0lSkVm05bInXzAMyQQUEnd6TeTAiE5KiQUDXPCTbr2hhzLQ==
+
 eslint-plugin-react@^7.31.7:
   version "7.31.11"
   resolved "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.31.11.tgz"

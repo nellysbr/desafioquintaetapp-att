@@ -13,6 +13,7 @@
     "axios": "^1.2.0",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.6",
+    "eslint-plugin-react-hooks": "^5.0.0-next-f0534ae94-20221202",
     "express": "^4.18.2",
     "firebase": "^9.14.0",
     "firebase-tools": "^11.16.1",

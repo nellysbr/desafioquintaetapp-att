@@ -1,0 +1,30 @@
+.cardPedidos {
+  overflow-y: scroll;
+}
+
+.btnCancel {
+  background-color: red;
+  color: white;
+  font-size: bold;
+  border: none;
+  margin-right: 0.25rem;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+    color: white;
+  }
+}
+
+.btnAccept {
+  background-color: green;
+  color: white;
+  font-size: bold;
+  border: none;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+    color: white;
+  }
+}
