@@ -1,0 +1,15 @@
+.cardStyle {
+  overflow-y: scroll;
+  width: 100%;
+
+  .productCardsContainer {
+    width: 100%;
+  }
+
+  .minikanbam {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 1em;
+  }
+}

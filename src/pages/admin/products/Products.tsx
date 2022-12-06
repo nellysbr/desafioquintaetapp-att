@@ -11,18 +11,26 @@ import { collection, getDocs } from "firebase/firestore";
 const dbInstance = collection(database, "Cardapio");
 
 //antd
-import { Row, Col, Button, Card, Typography } from "antd";
-const { Title } = Typography;
+import { Row, Col, Button, Card, Typography, Image } from "antd";
+const { Title, Text, Paragraph } = Typography;
 
 //css
 
 import styles from "../../../../styles/Products.module.scss";
 import Router from "next/router";
 
-//components
-import ProductList from "../../../components/ProductList";
+//api
+import api from "../../api/api";
 
 const Products: NextPageWithLayout = () => {
+  const [cardapio, setCardapio] = useState<any[]>([]);
+  useEffect(() => {
+    api.get("/Cardapio").then((response) => {
+      setCardapio(response.data);
+    });
+    console.log(cardapio);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       <Card
@@ -47,9 +55,52 @@ const Products: NextPageWithLayout = () => {
           </>
         }
       >
-        <Row>
-          <Col xs={24} xl={24} className={styles.productListContainer}>
-            <ProductList />
+        <Row gutter={[32, 32]}>
+          <Col xs={24} xl={24}>
+            <Card className={styles.cardConsumer}>
+              <Row gutter={8}>
+                {cardapio.map((item) => {
+                  return (
+                    <Col
+                      key={item.id}
+                      xs={8}
+                      xl={8}
+                      className={styles.productCardsContainer}
+                    >
+                      <Card className={styles.minikanbam}>
+                        <Row>
+                          <Col xs={24} xl={24}>
+                            <Image
+                              src={item.imageURL}
+                              width={100}
+                              height={50}
+                              alt="imagem produto"
+                            />
+                          </Col>
+                          <Col xs={24} xl={24}>
+                            <Paragraph>
+                              <Text>Nome do produto: {item.nome}</Text>
+                            </Paragraph>
+                          </Col>
+                          <Col xs={24} xl={24}>
+                            <Paragraph>
+                              <Text>Valor do produto: {item.valor} R$</Text>
+                            </Paragraph>
+                          </Col>
+                          <Col xs={24} xl={24}>
+                            <Paragraph>
+                              <Text>
+                                Descricao do produto: {item.description}
+                              </Text>
+                            </Paragraph>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Card>
           </Col>
         </Row>
       </Card>

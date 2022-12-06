@@ -3,6 +3,12 @@
   -webkit-box-shadow: -5px 5px 35px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -5px 5px 35px -3px rgba(0, 0, 0, 0.75);
   box-shadow: -5px 5px 35px -3px rgba(0, 0, 0, 0.75);
+  overflow-y: scroll;
+
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 1.875rem;
 
   .titleContainer {
     text-align: center;
@@ -15,6 +21,14 @@
   }
 
   .productListContainer {
-    margin: 3rem;
+    margin: 1rem;
+  }
+
+  .cardConsumer {
+    .minikanbam {
+      background-color: #fff;
+      border: none;
+      padding: 1em;
+    }
   }
 }
