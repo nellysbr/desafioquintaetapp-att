@@ -35,21 +35,18 @@ const Products: NextPageWithLayout = () => {
     <>
       <Card
         className={styles.cardStyle}
+        extra={
+          <Button onClick={() => Router.push("/admin/products/NewProduct")}>
+            Adicionar produto
+          </Button>
+        }
         title={
           <>
             <Row>
-              <Col xs={20} xl={20} className={styles.titleContainer}>
+              <Col xs={24} xl={24} className={styles.titleContainer}>
                 <Title className={styles.cardTitle} level={3}>
                   Produtos
                 </Title>
-              </Col>
-              <Col xs={4} xl={4} className={styles.titleContainer}>
-                <Button
-                  onClick={() => Router.push("/admin/products/NewProduct")}
-                  className={styles.btnAdd}
-                >
-                  Adicionar produto
-                </Button>
               </Col>
             </Row>
           </>
